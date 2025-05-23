@@ -37,5 +37,13 @@ This project demonstrates the design and deployment of a full-stack two-tier web
 - **Scalability and Availability:** Ensure the application can handle load fluctuations and remain available across multiple availability zones using an ALB.
 - **Automation:** Use `user_data.tpl` to bootstrap EC2 instances with the Node.js app and PM2 for persistent runtime.
 
+# CI/CD Integration
+This project includes basic CI/CD pipelines using GitHub Actions to automate both application deployment and infrastructure validation:
+
+- **Application Deployment:** On each push to the main branch, GitHub Actions automatically SSHs into both EC2 instances, pulls the latest code, and restarts the Node.js app with PM2.
+- **Infrastructure Validation:** On each pull request, Terraform code is automatically checked for formatting, validated, and planned to preview changes before merging.
+
+These pipelines improve code reliability, support rapid iteration, and help maintain infrastructure and app quality.
+
 # Conclusion
 This project showcases the implementation of a secure, scalable, and automated AWS infrastructure to support a two-tier web application. Leveraging services like EC2, RDS, and ALB, and managing them with Terraform, provides a reliable and modular cloud solution. This architecture lays a strong foundation for future enhancements, including HTTPS via ACM, autoscaling, CloudWatch integration, and CI/CD pipelines for continuous delivery and monitoring.
