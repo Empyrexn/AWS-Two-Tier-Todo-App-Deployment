@@ -68,5 +68,3 @@ DESCRIBE Tasks;
 ```sql
 exit;
 ```
-
-These were the steps taken in order to 
