@@ -4,31 +4,31 @@
 This project demonstrates the design and deployment of a full-stack two-tier web application on AWS using Terraform. The architecture consists of a Node.js-based backend running on EC2 instances and a MySQL RDS database for persistent data storage. An Application Load Balancer (ALB) distributes traffic across EC2 instances to ensure high availability and scalability. The infrastructure is built using Infrastructure as Code (IaC) principles with Terraform for repeatability and automation.
 
 ## Key Components
-1. **Amazon EC2** (Web Servers)
+**Amazon EC2** (Web Servers)
 
 **Role:** Hosts the Node.js Todo App and serves traffic via NGINX reverse proxy on port 80. PM2 is used to ensure the application remains running after restarts and reboots.
 
 **Security:** The EC2 instances reside in public subnets and are secured with security groups that allow HTTP access from the ALB and SSH access only from a specified IP for administrative purposes.
 
-2. **Amazon RDS** (MySQL)
+**Amazon RDS** (MySQL)
 
 **Role:** Provides a managed relational database for storing application data securely and reliably.
 
 **Security:** The RDS instance is deployed in private subnets, making it inaccessible from the internet. Only EC2 instances within the same VPC are permitted access. Data is encrypted at rest and in transit.
 
-3. **Application Load Balancer** (ALB)
+**Application Load Balancer** (ALB)
 
 **Role:** Distributes incoming HTTP requests evenly across the EC2 instances, ensuring consistent application availability and improved fault tolerance.
 
 **Security:** The ALB is internet-facing, with a security group that allows HTTP traffic from the public (0.0.0.0/0). It routes traffic only to healthy EC2 targets.
 
-4. **Virtual Private Cloud** (VPC)
+**Virtual Private Cloud** (VPC)
 
 **Role:** Provides isolated networking infrastructure, separating public and private subnets for secure resource placement.
 
 **Security:** Configured with custom route tables, public and private subnets, internet and NAT gateways (optional), and tightly scoped security groups to control traffic flow.
 
-5. **IAM Roles & Policies**
+**IAM Roles & Policies**
 
 **Role:** Grants the necessary permissions to EC2 instances and other components to interact with AWS services securely, such as accessing instance metadata, CloudWatch logs, or bootstrapping applications.
 
