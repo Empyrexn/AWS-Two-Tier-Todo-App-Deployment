@@ -1,0 +1,21 @@
+- name: Deploy to EC2 web1
+  uses: appleboy/ssh-action@v1.0.3
+  with:
+    host: ${{ secrets.EC2_PUBLIC_IP_1 }}
+    username: ec2-user
+    key: ${{ secrets.EC2_SSH_KEY }}
+    script: |
+      cd ~/Todo-Two-Tier
+      git pull origin main
+      pm2 restart todoapp || pm2 start index.js --name todoapp
+
+- name: Deploy to EC2 web2
+  uses: appleboy/ssh-action@v1.0.3
+  with:
+    host: ${{ secrets.EC2_PUBLIC_IP_2 }}
+    username: ec2-user
+    key: ${{ secrets.EC2_SSH_KEY }}
+    script: |
+      cd ~/Todo-Two-Tier
+      git pull origin main
+      pm2 restart todoapp || pm2 start index.js --name todoapp
