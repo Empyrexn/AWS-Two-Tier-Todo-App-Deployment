@@ -37,7 +37,7 @@ This project demonstrates the design and deployment of a full-stack two-tier web
 - **Infrastructure as Code:** Use Terraform to define, deploy, and manage infrastructure consistently and reliably.
 - **Security Best Practices:** Implement private subnets, role-based access control, and metadata protection to safeguard resources.
 - **Scalability and Availability:** Ensure the application can handle load fluctuations and remain available across multiple availability zones using an ALB.
-- **Automation:** Use `user_data.tpl` to bootstrap EC2 instances with the Node.js app and PM2 for persistent runtime.
+- **Automation:** Use `user_data.tpl` and `bastion_host_data.tpl` to bootstrap EC2 instances with the Node.js app and PM2 for the web instances and to automatically connect to and set up the database in the bastion instance for persistent runtime.
 
 # CI/CD Integration
 This project includes basic CI/CD pipelines using GitHub Actions to automate both application deployment and infrastructure validation:
