@@ -3,6 +3,8 @@
 # Overview
 This project demonstrates the design and deployment of a full-stack two-tier web application on AWS using Terraform. The architecture consists of a Node.js-based backend running on EC2 instances and a MySQL RDS database for persistent data storage. An Application Load Balancer (ALB) distributes traffic across EC2 instances to ensure high availability and scalability. The infrastructure is built using Infrastructure as Code (IaC) principles with Terraform for repeatability and automation.
 
+![AppArchitecture](https://github.com/user-attachments/assets/a7442cd3-ef13-4d14-9cba-8d6624dcee19)
+
 # Key Components
 
 ## Amazon EC2 (Web Servers)
