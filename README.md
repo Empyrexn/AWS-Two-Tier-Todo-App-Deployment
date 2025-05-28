@@ -50,4 +50,6 @@ These pipelines improve code reliability, support rapid iteration, and help main
 # Conclusion
 This project showcases the implementation of a secure, scalable, and automated AWS infrastructure to support a two-tier web application. Leveraging services like EC2, RDS, and ALB, and managing them with Terraform, provides a reliable and modular cloud solution. This architecture lays a strong foundation for future enhancements, including HTTPS via ACM, autoscaling, CloudWatch integration, and CI/CD pipelines for continuous delivery and monitoring.
 
+Disclaimer: This repository is for educational and portfolio purposes only. No license is granted for reuse or redistribution of this code.
+
 ![Screenshot 2025-05-23 152715](https://github.com/user-attachments/assets/f41c5b14-64bc-4254-94ca-34fc0ee52a16)
