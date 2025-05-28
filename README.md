@@ -1,5 +1,7 @@
 # AWS-Two-Tier-Todo-App-Deployment
 
+Disclaimer: This repository is for educational and portfolio purposes only. No license is granted for reuse or redistribution of this code.
+
 # Overview
 This project demonstrates the design and deployment of a full-stack two-tier web application on AWS using Terraform. The architecture consists of a Node.js-based backend running on EC2 instances and a MySQL RDS database for persistent data storage. An Application Load Balancer (ALB) distributes traffic across EC2 instances to ensure high availability and scalability. The infrastructure is built using Infrastructure as Code (IaC) principles with Terraform for repeatability and automation.
 
@@ -49,7 +51,5 @@ These pipelines improve code reliability, support rapid iteration, and help main
 
 # Conclusion
 This project showcases the implementation of a secure, scalable, and automated AWS infrastructure to support a two-tier web application. Leveraging services like EC2, RDS, and ALB, and managing them with Terraform, provides a reliable and modular cloud solution. This architecture lays a strong foundation for future enhancements, including HTTPS via ACM, autoscaling, CloudWatch integration, and CI/CD pipelines for continuous delivery and monitoring.
-
-Disclaimer: This repository is for educational and portfolio purposes only. No license is granted for reuse or redistribution of this code.
 
 ![Screenshot 2025-05-23 152715](https://github.com/user-attachments/assets/f41c5b14-64bc-4254-94ca-34fc0ee52a16)
